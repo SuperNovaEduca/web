@@ -118,19 +118,19 @@ body {
 
 /* Ajustes específicos por tema */
 html[data-theme="dark"] .logo-header-alternativo {
-    max-height: 26px;
-}
-
-html[data-theme="light"] .logo-header-alternativo {
     max-height: 28px;
+}
+x
+html[data-theme="light"] .logo-header-alternativo {
+    max-height: 45px;
 }
 
 html[data-theme="dark"] .logo-supernova-header {
-    max-height: 26px;
+    max-height: 28px;
 }
 
 html[data-theme="light"] .logo-supernova-header {
-    max-height: 28px;
+    max-height: 45px;
 }
 
 .brand-icon {
@@ -561,7 +561,7 @@ body.mobile-panel-open {
     height: auto;
     width: auto;
     object-fit: contain;
-    max-width: none;
+    max-width: 300px;
     object-position: center;
 }
 
@@ -1653,13 +1653,19 @@ body.mobile-panel-open {
     }
     
     /* Logos en tablet */
-    .logo-supernova-header,
-    .logo-header-alternativo {
+    html[data-theme="dark"] .logo-supernova-header,
+    html[data-theme="dark"] .logo-header-alternativo {
         max-height: 32px;
     }
     
+    html[data-theme="light"] .logo-supernova-header,
+    html[data-theme="light"] .logo-header-alternativo {
+        max-height: 40px;
+    }
+    
     .logo-supernova-bienvenido,
-    .logo-bienvenido-alternativo {
+    .logo-bienvenido-alternativo,
+    .hero-logo {
         max-width: 250px;
     }
     
@@ -1683,9 +1689,14 @@ body.mobile-panel-open {
     }
     
     /* Logos en móvil landscape */
-    .logo-supernova-header,
-    .logo-header-alternativo {
+    html[data-theme="dark"] .logo-supernova-header,
+    html[data-theme="dark"] .logo-header-alternativo {
         max-height: 30px;
+    }
+    
+    html[data-theme="light"] .logo-supernova-header,
+    html[data-theme="light"] .logo-header-alternativo {
+        max-height: 38px;
     }
     
     .logo-mobile-panel {
@@ -1710,7 +1721,8 @@ body.mobile-panel-open {
     }
     
     .logo-supernova-bienvenido,
-    .logo-bienvenido-alternativo {
+    .logo-bienvenido-alternativo,
+    .hero-logo {
         max-width: 200px;
     }
     
@@ -1884,13 +1896,19 @@ body.mobile-panel-open {
     }
     
     /* Logos específicos en móvil portrait */
-    .logo-supernova-header,
-    .logo-header-alternativo {
+    html[data-theme="dark"] .logo-supernova-header,
+    html[data-theme="dark"] .logo-header-alternativo {
         max-height: 28px;
     }
     
+    html[data-theme="light"] .logo-supernova-header,
+    html[data-theme="light"] .logo-header-alternativo {
+        max-height: 35px;
+    }
+    
     .logo-supernova-bienvenido,
-    .logo-bienvenido-alternativo {
+    .logo-bienvenido-alternativo,
+    .hero-logo {
         max-width: 180px;
     }
     
@@ -1910,7 +1928,8 @@ body.mobile-panel-open {
     }
     
     .logo-supernova-bienvenido,
-    .logo-bienvenido-alternativo {
+    .logo-bienvenido-alternativo,
+    .hero-logo {
         max-width: 180px;
     }
     
@@ -2042,13 +2061,19 @@ body.mobile-panel-open {
     }
     
     /* Logos en pantallas extra pequeñas */
-    .logo-supernova-header,
-    .logo-header-alternativo {
+    html[data-theme="dark"] .logo-supernova-header,
+    html[data-theme="dark"] .logo-header-alternativo {
         max-height: 25px;
     }
     
+    html[data-theme="light"] .logo-supernova-header,
+    html[data-theme="light"] .logo-header-alternativo {
+        max-height: 32px;
+    }
+    
     .logo-supernova-bienvenido,
-    .logo-bienvenido-alternativo {
+    .logo-bienvenido-alternativo,
+    .hero-logo {
         max-width: 150px;
     }
     

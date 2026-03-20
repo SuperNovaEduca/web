@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supernova Educación</title>
+    <title>Supernova Paraguay | Alto Rendimiento</title>
+    <meta name="description" content="Fábrica de talento de alto rendimiento en robótica y tecnología. Proyectos reales y competencias internacionales.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Supernova Paraguay | Alto Rendimiento">
+    <meta property="og:description" content="Fábrica de talento de alto rendimiento en robótica y tecnología. Proyectos reales y competencias internacionales.">
+    <meta property="og:image" content="../images/Supernovabienvenido.png">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="../styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -112,9 +118,12 @@
             <p class="section-subtitle">Explora los innovadores proyectos de robótica desarrollados por el equipo Supernova.</p>
             
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" onclick="openYouTubeModal('eIlc_r2NLcQ')" style="cursor: pointer;">
                     <div class="project-image">
                         <img src="../images/techvoyage.jpg" alt="Tech Voyage">
+                        <div class="play-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
                     </div>
                     <h3 class="project-title">Tech Voyage</h3>
                     <p class="project-description">Proyecto de reciclaje de computadoras antiguas, instalando Linux para óptimo rendimiento y llevándolas a lugares de bajos recursos.</p>
@@ -122,17 +131,23 @@
                 
                 
                 
-                <div class="project-card">
+                <div class="project-card" onclick="openYouTubeModal('mqhqTruwY3A')" style="cursor: pointer;">
                     <div class="project-image">
                         <img src="../images/unlitrodeluz.jpg" alt="Un Litro de Luz">
+                        <div class="play-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
                     </div>
                     <h3 class="project-title">Un Litro de Luz</h3>
                     <p class="project-description">Iniciativa para llevar luz a comunidades sin acceso a electricidad, utilizando paneles solares, secuencias de LEDs, baterías y botellas con agua y cloro como difusores.</p>
                 </div>
                 
-                <div class="project-card">
+                <div class="project-card" onclick="openYouTubeModal('mqhqTruwY3A')" style="cursor: pointer;">
                     <div class="project-image">
                         <img src="../images/smarttouch.jpg" alt="SmartTouch">
+                        <div class="play-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
                     </div>
                     <h3 class="project-title">SmartTouch</h3>
                     <p class="project-description">Sistema de aprendizaje interactivo que usa Makey Makey para conectar cajas o maquetas con contactos, creando una experiencia educativa táctil.</p>
@@ -365,12 +380,22 @@
          }
         
         // Close modal when clicking outside
-        window.onclick = function(event) {
+        window.addEventListener('click', function(event) {
             const modal = document.getElementById('curriculumModal');
             if (event.target === modal) {
                 closeCurriculumModal();
             }
-        }
+        });
     </script>
+    <!-- YouTube Modal -->
+    <div id="youtubeModal" class="youtube-modal">
+        <div class="youtube-modal-content">
+            <span class="youtube-close" onclick="closeYouTubeModal()">&times;</span>
+            <div class="youtube-video-container">
+                <iframe id="youtubeVideo" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

@@ -230,6 +230,34 @@ document.addEventListener('DOMContentLoaded', function() {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
     });
+});
+
+// YouTube Modal Functions
+window.openYouTubeModal = function(videoId) {
+    const modal = document.getElementById('youtubeModal');
+    const iframe = document.getElementById('youtubeVideo');
+    if (modal && iframe) {
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+};
+
+window.closeYouTubeModal = function() {
+    const modal = document.getElementById('youtubeModal');
+    const iframe = document.getElementById('youtubeVideo');
+    if (modal && iframe) {
+        iframe.src = '';
+        modal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+    }
+};
+
+// Close modal when clicking outside
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('youtubeModal');
+    if (event.target === modal) {
+        window.closeYouTubeModal();
+    }
 });

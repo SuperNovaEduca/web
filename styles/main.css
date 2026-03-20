@@ -117,21 +117,8 @@ body {
 }
 
 /* Ajustes específicos por tema */
-html[data-theme="dark"] .logo-header-alternativo {
-    max-height: 28px;
-}
-x
-html[data-theme="light"] .logo-header-alternativo {
-    max-height: 45px;
-}
+/* Tamaños de logos controlados por clases base */
 
-html[data-theme="dark"] .logo-supernova-header {
-    max-height: 28px;
-}
-
-html[data-theme="light"] .logo-supernova-header {
-    max-height: 45px;
-}
 
 .brand-icon {
     font-size: 24px;

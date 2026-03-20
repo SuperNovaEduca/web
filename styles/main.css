@@ -2111,16 +2111,18 @@ html {
 
 /* Sistema de variables CSS optimizado */
 html {
-    /* Tema oscuro por defecto */
-    --bg-color: #0f172a;
-    --card-bg: #1e293b;
-    --text-color: #f1f5f9;
-    --text-secondary: #94a3b8;
-    --primary-color: #4f9cf9;
-    --secondary-color: #3182ce;
-    --border-color: #334155;
-    --navbar-bg: rgba(15, 23, 42, 0.95);
-    --navbar-bg-scroll: rgba(15, 23, 42, 0.98);
+    /* Tema oscuro por defecto - Identidad Madre Supernova */
+    --bg-color: #0A0F2C;
+    --card-bg: #0F1E4A;
+    --text-color: #FFFFFF;
+    --text-secondary: #AAB3D1;
+    --primary-color: #00D4FF;
+    --secondary-color: #4BE1FF;
+    --accent-color: #00D4FF;
+    --space-purple: #6C5CE7;
+    --border-color: #1E2E61;
+    --navbar-bg: rgba(10, 15, 44, 0.95);
+    --navbar-bg-scroll: rgba(10, 15, 44, 0.98);
 }
 
 /* Tema claro */
@@ -2845,4 +2847,22 @@ body {
         height: 50px;
         font-size: 20px;
     }
+}
+
+/* --- ESTILOS ESTRATÉGICOS SUPERNOVA --- */
+
+/* Glow (toque premium) en cyan */
+.highlight {
+    color: var(--primary-color) !important;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.6);
+}
+
+/* Detalle opcional (International) - Purple Glow */
+.glow-purple {
+    text-shadow: 0 0 12px rgba(108, 92, 231, 0.6);
+}
+
+/* Hover premium para tarjetas */
+.project-card:hover {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.15) !important;
 }

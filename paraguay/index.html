@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supernova Educación</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="../images/SupernovaHeder.png" alt="Supernova Educación" class="brand-logo logo-supernova-header">
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">🌍 Internacional</a>
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#proyectos" class="nav-link">Proyectos</a>
+            </div>
+            <div class="nav-actions">
+                <span class="toggle-icon" id="theme-toggle">🌙</span>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Extended Panel -->
+        <div class="mobile-panel" id="mobile-panel">
+            <div class="mobile-panel-content">
+                <div class="mobile-panel-header">
+                <img src="../images/bienvenido alternativo.png" alt="Supernova" class="mobile-panel-logo logo-mobile-panel">
+            </div>
+                
+                    <a href="../index.html" class="mobile-nav-link">
+                        <span class="mobile-nav-icon">🌍</span>
+                        <span>Internacional</span>
+                    </a>
+                    <a href="#inicio" class="mobile-nav-link">
+                        <span class="mobile-nav-icon">🏠</span>
+                        <span>Inicio</span>
+                    </a>
+                    <a href="#proyectos" class="mobile-nav-link">
+                        <span class="mobile-nav-icon">🚀</span>
+                        <span>Proyectos</span>
+                    </a>
+                
+                <div class="mobile-panel-contact">
+                    <h4>Contacto Rápido</h4>
+                    <a href="https://wa.me/595984529505" target="_blank" class="mobile-contact-item">
+                        <span class="mobile-contact-icon">📱</span>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="mailto:info@supernova.com.py" class="mobile-contact-item">
+                        <span class="mobile-contact-icon">✉️</span>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://maps.app.goo.gl/LdqzCdmUrZXSbnpo8" target="_blank" class="mobile-contact-item">
+                        <span class="mobile-contact-icon">📍</span>
+                        <span>Ubicación</span>
+                    </a>
+                </div>
+                
+                <div class="mobile-panel-social">
+                    <h4>Síguenos</h4>
+                    <div class="mobile-social-links">
+                        <a href="#" class="mobile-social-link">📷 Instagram</a>
+                        <a href="#" class="mobile-social-link">📺 YouTube</a>
+                    </div>
+                </div>
+                
+                <div class="mobile-panel-theme">
+                    <h4>Cambiar Tema</h4>
+                    <button class="mobile-panel-theme-toggle">🌙</button>
+                </div>
+                
+                <div class="mobile-panel-footer">
+                    <p>© 2025 Supernova Educación</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+
+    
+    <section id="inicio" class="hero">
+        <div class="hero-background">
+            <img src="../images/hero-background.svg" alt="Hero Background" class="hero-bg-image">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-text">Bienvenido a</span>
+                <img src="../images/Supernovabienvenido.png" alt="Supernova" class="hero-logo logo-supernova-bienvenido">
+            </h1>
+            <p class="hero-subtitle">Innova. Construye. Compite. Aprende.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-secondary" onclick="document.querySelector('#proyectos').scrollIntoView({behavior: 'smooth'})">Nuestro Trabajo</button>
+                <button class="btn btn-primary" onclick="window.open('https://forms.gle/placeholder', '_blank')">Aplicar Ahora</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <h2 class="section-title">Nuestros Proyectos</h2>
+            <p class="section-subtitle">Explora los innovadores proyectos de robótica desarrollados por el equipo Supernova.</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/techvoyage.jpg" alt="Tech Voyage">
+                    </div>
+                    <h3 class="project-title">Tech Voyage</h3>
+                    <p class="project-description">Proyecto de reciclaje de computadoras antiguas, instalando Linux para óptimo rendimiento y llevándolas a lugares de bajos recursos.</p>
+                </div>
+                
+                
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/unlitrodeluz.jpg" alt="Un Litro de Luz">
+                    </div>
+                    <h3 class="project-title">Un Litro de Luz</h3>
+                    <p class="project-description">Iniciativa para llevar luz a comunidades sin acceso a electricidad, utilizando paneles solares, secuencias de LEDs, baterías y botellas con agua y cloro como difusores.</p>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/smarttouch.jpg" alt="SmartTouch">
+                    </div>
+                    <h3 class="project-title">SmartTouch</h3>
+                    <p class="project-description">Sistema de aprendizaje interactivo que usa Makey Makey para conectar cajas o maquetas con contactos, creando una experiencia educativa táctil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <h2 class="section-title">Mentes Detrás de Supernova</h2>
+            <p class="section-subtitle">Somos un equipo apasionado de innovadores y solucionadores de problemas dedicados a superar los límites de la robótica.</p>
+            
+            <div class="team-grid">
+                <div class="team-member" onclick="openCurriculumModal('alejandro')">
+                    <div class="member-avatar">
+                        <img src="../images/Alejandro Portillo.jpg" alt="Alejandro Portilla">
+                    </div>
+                    <h3 class="member-name">Alejandro Portillo</h3>
+                    <p class="member-role">Fundador</p>
+                    <a href="https://www.instagram.com/pinchyportillo" target="_blank" class="member-handle" onclick="event.stopPropagation()">@pinchyportillo</a>
+                </div>
+                
+                <div class="team-member" onclick="openCurriculumModal('robert')">
+                    <div class="member-avatar">
+                        <img src="../images/Robert salinas.png" alt="Robert Salinas">
+                    </div>
+                    <h3 class="member-name">Esteban Salinas</h3>
+                    <p class="member-role">Co-Founder & Director Supernova Paraguay</p>
+                    <a href="https://www.instagram.com/robert_salinas.dev" target="_blank" class="member-handle" onclick="event.stopPropagation()">@robert.salinas.dev</a>
+                </div>
+            </div>
+            
+            <!-- Achievements Section -->
+            <div class="achievements">
+                <h3 class="achievements-title">Nuestros Logros</h3>
+                <p class="achievements-subtitle">Estamos orgullosos de nuestros logros y contribuciones a la comunidad.</p>
+                
+                <div class="achievements-list">
+                    <div class="achievement-item">
+                        <span class="achievement-icon">🎯</span>
+                        <span class="achievement-text">Proyecto Destacado en la Expo Educación 2024</span>
+                    </div>
+                    <div class="achievement-item">
+                        <span class="achievement-icon">🌍</span>
+                        <span class="achievement-text">Reconocimiento del Centro de Sabiduría Mundial a nivel Latinoamérica</span>
+                    </div>
+                    <div class="achievement-item">
+                        <span class="achievement-icon">🏆</span>
+                        <span class="achievement-text">Campeonato Departamental y Nacional en la Olimpiada de Scratch 2024</span>
+                    </div>
+                    <div class="achievement-item">
+                        <span class="achievement-icon">💡</span>
+                        <span class="achievement-text">Mejor Proyecto Innovador en Pequeños Inventores</span>
+                    </div>
+                    <div class="achievement-item">
+                        <span class="achievement-icon">🏅</span>
+                        <span class="achievement-text">Trofeo Core Values de FLL Paraguay</span>
+                    </div>
+                    <div class="achievement-item">
+                        <span class="achievement-icon">🎓</span>
+                        <span class="achievement-text">Acreditación para la Competencia Nacional de Semilleros en Colombia</span>
+                    </div>
+                    <div class="achievement-item">
+                        <span class="achievement-icon">📚</span>
+                        <span class="achievement-text">Participación en la Expo Educación y presentación de proyectos ganadores 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Supernova Paraguay</h3>
+                    <p>Fábrica de talento de alto rendimiento en robótica y tecnología.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">📺</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="../index.html">Internacional</a></li>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>📍 <a href="https://maps.app.goo.gl/LdqzCdmUrZXSbnpo8" target="_blank" style="color: inherit; text-decoration: none;">SuperNova Education 100163, Cd. del Este 100163</a></p>
+                    <p>📞 <a href="https://wa.me/595984529505" target="_blank" style="color: inherit; text-decoration: none;">+595 984529505</a></p>
+                    <p>✉️ info@supernova.com.py</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Supernova Educación. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Curriculum Modal -->
+    <div id="curriculumModal" class="curriculum-modal">
+        <div class="curriculum-modal-content">
+            <span class="curriculum-close" onclick="closeCurriculumModal()">&times;</span>
+            <div class="curriculum-container" id="curriculumContainer">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/main.js"></script>
+    <script>
+        // Curriculum Modal Functions
+        function openCurriculumModal(person) {
+            const modal = document.getElementById('curriculumModal');
+            const container = document.getElementById('curriculumContainer');
+            
+            let content = '';
+            
+            if (person === 'alejandro') {
+                content = `
+                    <div class="curriculum-header">
+                        <img src="../images/Alejandro Portillo.jpg" alt="Alejandro Portillo" class="curriculum-photo">
+                        <div class="curriculum-info">
+                            <h2>Alejandro Portillo</h2>
+                            <h3>Fundador de Supernova Educación | Creador de Syntropy Startup</h3>
+                            <p class="curriculum-contact">📧 alejandroportillo@syntropystartup.com | 📱 +595 975 890 451</p>
+                        </div>
+                    </div>
+                    <div class="curriculum-body">
+                        <div class="curriculum-section">
+                            <h4>🌟 Visión que Inspira, Tecnología que Transforma</h4>
+                            <p>Emprendedor, educador y apasionado por la tecnología con enfoque humano. Fundador de Supernova Educación, un semillero de innovación juvenil, y de Syntropy Startup, iniciativa dedicada a reducir la brecha tecnológica y educativa en Paraguay. Convencido de que el conocimiento compartido puede cambiar el destino de una generación.</p>
+                        </div>
+                        <div class="curriculum-section">
+                            <h4>🏆 Logros y Reconocimientos Destacados</h4>
+                            <ul>
+                                <li>🇨🇷 <strong>Estudiante Internacional</strong> – Beca United World College Costa Rica (2025–2027)</li>
+                                <li>🌍 <strong>Top 12 Mundial</strong> – Scratch Olympiad Finlandia (2024)</li>
+                                <li>🧠 <strong>Reconocimiento por el Centro de Sabiduría Mundial Latinoamérica</strong> (WWC 2024)</li>
+                                <li>🏗 <strong>Mejor Proyecto de Ingeniería</strong> – Olimpiada Nacional STEAM Paraguay</li>
+                                <li>🤝 <strong>Trofeo Core Values</strong> – First Lego League Paraguay (FLL)</li>
+                                <li>🏅 <strong>Reconocimiento como Alumno Dilecto</strong> – Junta Municipal de Ciudad del Este</li>
+                                <li>🧮 <strong>Ex-Medallista Olímpico Nacional</strong> – OMAPA (2015–2023)</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-section">
+                            <h4>🚀 Proyectos que Marcan el Rumbo</h4>
+                            <ul>
+                                <li><strong>Tech Voyage:</strong> Proyecto de revalorización de computadoras en desuso con Linux educativo</li>
+                                <li><strong>SmartTouch:</strong> Sistema interactivo de aprendizaje táctil</li>
+                                <li><strong>MIRA:</strong> Plataforma de monitoreo ambiental de agua con sensores inteligentes</li>
+                                <li><strong>Eco-Bot:</strong> Clasificador inteligente de residuos con IA</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-section">
+                            <h4>🎓 Formación y Certificaciones</h4>
+                            <ul>
+                                <li>🔬 <strong>Ex-Pasante</strong> – Parque Tecnológico Itaipú (PTI Paraguay)</li>
+                                <li>🧠 <strong>Scratch Master</strong> – Programación Creativa Infantil y Juvenil</li>
+                                <li>🤖 <strong>Certificación en Robótica Educativa</strong> – Piensa LATAM</li>
+                                <li>🔬 <strong>Certificación en Programación</strong> – Mi Lab Hub de Innovación</li>
+                                <li>🧑‍💻 <strong>Técnico en Informática</strong> – Formación Profesional Técnica</li>
+                                <li>🎓 <strong>Formación continua en Inteligencia Artificial, Machine Learning y Diseño de Proyectos STEAM</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            } else if (person === 'robert') {
+                content = `
+                    <div class="curriculum-header">
+                        <img src="../images/Robert salinas.png" alt="Robert Esteban Salinas Cantero" class="curriculum-photo">
+                        <div class="curriculum-info">
+                             <h2>Esteban Salinas</h2>
+                             <h3>Co-Founder & Director - Supernova Paraguay</h3>
+                            <p class="curriculum-contact">📧 robertsalinas@syntropystartup.com | 📱 +595 984 529 509 | 🌐 @esteban_salinas777</p>
+                        </div>
+                    </div>
+                    <div class="curriculum-body">
+                        <div class="curriculum-section">
+                            <h4>🎯 Perfil Profesional</h4>
+                            <p>Desarrollador Full-Stack enfocado en soluciones tecnológicas aplicadas a la educación y al desarrollo social. Co-líder técnico de Supernova Educación, con experiencia práctica en sistemas embebidos, automatización, y proyectos sustentables. Apasionado por aplicar la tecnología para transformar comunidades y resolver problemas reales.</p>
+                        </div>
+                        <div class="curriculum-section">
+                            <h4>💻 Habilidades Técnicas</h4>
+                            <ul>
+                                <li><strong>Lenguajes:</strong> Python, JavaScript, C++, HTML/CSS</li>
+                                <li><strong>Hardware y Plataformas:</strong> Arduino, Raspberry Pi, ESP32</li>
+                                <li><strong>Web & Backend:</strong> React.js, Node.js, Express.js</li>
+                                <li><strong>Bases de Datos:</strong> MySQL, MongoDB</li>
+                                <li><strong>Herramientas:</strong> Git, VS Code, Figma, Arduino IDE, Fusion 360, impresión 3D</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-section">
+                            <h4>🏆 Logros Destacados</h4>
+                            <ul>
+                                <li>🧠 <strong>Reconocimiento técnico del Parque Tecnológico Itaipú (PTI)</strong> por el desarrollo de un sistema embebido funcional para control de acceso y ventilación inteligente</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-section">
+                            <h4>💡 Proyectos Relevantes</h4>
+                            <ul>
+                                <li><strong>Un Litro de Luz Paraguay:</strong> Implementación de luminarias solares sustentables en comunidades vulnerables</li>
+                                <li><strong>Sistema CNC:</strong> Desarrollo de máquina CNC a bajo costo utilizando Arduino y estructuras recicladas</li>
+                                <li><strong>Sistema de Ventilación Inteligente:</strong> Control automático de temperatura para dispositivos de acceso, con sensores térmicos, relés y señalización LED (Arduino + Raspberry Pi)</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            container.innerHTML = content;
+             modal.classList.add('show');
+             document.body.style.overflow = 'hidden';
+        }
+        
+        function closeCurriculumModal() {
+             const modal = document.getElementById('curriculumModal');
+             modal.classList.remove('show');
+             document.body.style.overflow = 'auto';
+         }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('curriculumModal');
+            if (event.target === modal) {
+                closeCurriculumModal();
+            }
+        }
+    </script>
+</body>
+</html>

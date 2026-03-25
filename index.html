@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -24,10 +24,10 @@
         rel="stylesheet">
 </head>
 
-<body data-theme="dark"> <!-- Force dark theme base -->
+<body>
 
     <!-- Navigation -->
-    <nav class="navbar" style="background: rgba(3, 8, 22, 0.95); border-bottom: 1px solid rgba(0,242,254,0.1);">
+    <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
                 <img src="images/SupernovaHeder.png" alt="Supernova International"
@@ -41,6 +41,7 @@
                 <a href="#paises" class="nav-link">Nodos</a>
             </div>
             <div class="nav-actions">
+                <button id="theme-toggle" class="toggle-icon">☀️</button>
                 <div class="hamburger" id="hamburger">
                     <span></span>
                     <span></span>
@@ -91,7 +92,7 @@
         <div class="hero-revamp-bg"></div>
         <div class="hero-revamp-content fade-in">
             <!-- Simulated 3D/Robot visual logic icon -->
-            <div class="hero-robot-img" style="font-size: 8rem;"></div>
+            <div class="hero-robot-img"></div>
             <h1 class="hero-revamp-title">
                 Descubre tu lado <span class="glow-text">Supernova</span>
             </h1>
@@ -100,14 +101,14 @@
                 generación de líderes en STEAM.
             </p>
             <div class="hero-buttons" style="margin-top: 1rem;">
-                <a href="#innovacion" class="btn-supernova">Únete a la supernova</a>
-                <a href="#paises" class="btn btn-secondary">Explorar Nodos</a>
+                <a href="#innovacion" class="btn btn-supernova">Únete a la supernova</a>
+                <a href="#paises" class="btn btn-secondary-revamp">Explorar Nodos</a>
             </div>
         </div>
     </section>
 
     <!-- MOCKUP 1: Innovación Global Encendida -->
-    <section id="innovacion" class="section-revamp" style="background: var(--revamp-bg);">
+    <section id="innovacion" class="section-revamp">
         <div class="container" style="max-width: 1400px; padding: 0 40px;">
             <div class="innovacion-grid">
                 <!-- Left Column -->
@@ -189,7 +190,7 @@
     </section>
 
     <!-- MOCKUP 2: Las 5 Generaciones -->
-    <section id="generaciones" class="section-revamp" style="background: rgba(10,25,47,0.3);">
+    <section id="generaciones" class="section-revamp">
         <div class="section-header fade-in">
             <span class="subtitle-neon">NUESTRA HISTORIA</span>
             <h2 class="tech-title-center">Las 5 Generaciones</h2>
@@ -206,32 +207,11 @@
 
         <div class="gen-content fade-in" id="gen-content-area">
             <!-- Intercambiado mediante JS -->
-            <div class="gen-info">
-                <h3 class="gen-year glow-text-cyan">2023</h3>
-                <h4 class="gen-title">Primera Generación — Los Fundadores</h4>
-                <p class="gen-desc">El grupo pionero que encendió la chispa. Establecieron los primeros nodos,
-                    compitieron en FLL por primera vez y estructuraron la metodología de trabajo de alto rendimiento de
-                    Supernova.</p>
-                <div class="gen-actions">
-                    <button class="btn-outline-neon">VER PROYECTOS</button>
-                    <button class="btn-outline-neon">VER TRAYECTORIA</button>
-                </div>
-            </div>
-            <div class="gen-photos">
-                <div class="gen-photo-box">[Foto Gen I]</div>
-                <div class="gen-photo-box">[Foto Gen I]</div>
-                <div class="gen-photo-box">[Foto Gen I]</div>
-                <div class="gen-photo-box">[Foto Gen I]</div>
-                <div class="gen-photo-box">[Foto Gen I]</div>
-                <div class="gen-photo-box add-photo">
-                    <span>📷</span><br>Subir foto
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- MOCKUP 3: Presencia Global - Países -->
-    <section id="paises" class="section-revamp" style="background: var(--revamp-bg);">
+    <section id="paises" class="section-revamp">
         <div class="section-header fade-in">
             <span class="subtitle-neon">PRESENCIA GLOBAL</span>
             <h2 class="tech-title-center">Países</h2>
@@ -250,7 +230,7 @@
     </section>
 
     <!-- MOCKUP 4: Galería (Proyectos y Eventos) -->
-    <section id="proyectos" class="section-revamp" style="background: rgba(10,25,47,0.3);">
+    <section id="proyectos" class="section-revamp">
         <div class="section-header fade-in">
             <span class="subtitle-neon">ACTIVIDADES & MOMENTOS</span>
             <h2 class="tech-title-center">Galería</h2>
@@ -274,7 +254,7 @@
     </section>
 
     <!-- MOCKUP 5: Partners & Organizaciones -->
-    <section id="partners" class="section-revamp" style="background: var(--revamp-bg);">
+    <section id="partners" class="section-revamp">
         <div class="section-header fade-in">
             <span class="subtitle-neon">COLABORACIONES</span>
             <h2 class="tech-title-center">Partners & Organizaciones</h2>
@@ -302,8 +282,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer"
-        style="background: rgba(3, 8, 22, 0.95); padding: 50px 20px; border-top: 1px solid rgba(0,242,254,0.1);">
+    <footer class="footer">
         <div class="container fade-in">
             <div
                 style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; margin-bottom: 30px;">

@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supernova International | Alto Rendimiento Tecnológico</title>
-    <meta name="description" content="Organización internacional de alto rendimiento diseñada para maximizar el potencial de jóvenes talentos en robótica y programación.">
+    <title>Supernova International | Innovación Global</title>
+    <meta name="description"
+        content="Organización internacional de alto rendimiento diseñada para maximizar el potencial de jóvenes talentos en robótica y programación.">
     <!-- Open Graph -->
     <meta property="og:title" content="Supernova International | Alto Rendimiento Tecnológico">
-    <meta property="og:description" content="Organización internacional de alto rendimiento diseñada para maximizar el potencial de jóvenes talentos en robótica y programación.">
+    <meta property="og:description"
+        content="Organización internacional de alto rendimiento diseñada para maximizar el potencial de jóvenes talentos en robótica y programación.">
     <meta property="og:image" content="images/Supernovabienvenido.png">
     <meta property="og:type" content="website">
+
+    <!-- Original Base Styles -->
     <link rel="stylesheet" href="styles/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- New Revamped Styles -->
+    <link rel="stylesheet" href="styles/landing-revamp.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap"
+        rel="stylesheet">
 </head>
-<body>
+
+<body data-theme="dark"> <!-- Force dark theme base -->
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" style="background: rgba(3, 8, 22, 0.95); border-bottom: 1px solid rgba(0,242,254,0.1);">
         <div class="nav-container">
             <div class="nav-brand">
-                <img src="images/SupernovaHeder.png" alt="Supernova International" class="brand-logo logo-supernova-header">
+                <img src="images/SupernovaHeder.png" alt="Supernova International"
+                    class="brand-logo logo-supernova-header">
             </div>
             <div class="nav-menu">
                 <a href="#inicio" class="nav-link">Inicio</a>
-                <a href="#que-es" class="nav-link">Qué es</a>
-                <a href="#como-funciona" class="nav-link">Cómo Funciona</a>
-                <a href="#nodos" class="nav-link">Nodos</a>
-                <a href="#quienes-somos" class="nav-link">Quiénes</a>
-                <a href="https://forms.gle/placeholder" class="nav-link btn btn-primary" style="padding: 8px 16px; margin-left: 10px;">Aplicar</a>
+                <a href="#innovacion" class="nav-link">Innovación</a>
+                <a href="#generaciones" class="nav-link">Historia</a>
+                <a href="#proyectos" class="nav-link">Proyectos</a>
+                <a href="#paises" class="nav-link">Nodos</a>
             </div>
             <div class="nav-actions">
-                <span class="toggle-icon" id="theme-toggle">🌙</span>
                 <div class="hamburger" id="hamburger">
                     <span></span>
                     <span></span>
@@ -37,284 +48,303 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Mobile Extended Panel -->
         <div class="mobile-panel" id="mobile-panel">
             <div class="mobile-panel-content">
                 <div class="mobile-panel-header">
-                    <img src="images/bienvenido alternativo.png" alt="Supernova" class="mobile-panel-logo logo-mobile-panel">
+                    <img src="images/bienvenido alternativo.png" alt="Supernova"
+                        class="mobile-panel-logo logo-mobile-panel">
                 </div>
                 <div class="mobile-panel-nav">
                     <a href="#inicio" class="mobile-nav-link">
                         <span class="mobile-nav-icon">🏠</span>
                         <span>Inicio</span>
                     </a>
-                    <a href="#que-es" class="mobile-nav-link">
+                    <a href="#innovacion" class="mobile-nav-link">
                         <span class="mobile-nav-icon">🚀</span>
-                        <span>Qué es</span>
+                        <span>Innovación</span>
                     </a>
-                    <a href="#como-funciona" class="mobile-nav-link">
+                    <a href="#generaciones" class="mobile-nav-link">
+                        <span class="mobile-nav-icon">📅</span>
+                        <span>Historia</span>
+                    </a>
+                    <a href="#proyectos" class="mobile-nav-link">
                         <span class="mobile-nav-icon">⚙️</span>
-                        <span>Cómo Funciona</span>
+                        <span>Proyectos</span>
                     </a>
-                    <a href="#nodos" class="mobile-nav-link">
+                    <a href="#paises" class="mobile-nav-link">
                         <span class="mobile-nav-icon">🌍</span>
                         <span>Nodos</span>
                     </a>
                 </div>
-                <hr style="border-color: var(--border-color); opacity: 0.1; margin: 15px 0;">
                 <div class="mobile-panel-contact">
-                    <a href="https://forms.gle/placeholder" class="btn btn-primary" style="width: 100%; text-align: center;">Aplicar Ahora</a>
-                </div>
-                <div class="mobile-panel-theme" style="margin-top: 20px;">
-                    <h4>Cambiar Tema</h4>
-                    <button class="mobile-panel-theme-toggle">🌙</button>
+                    <a href="https://forms.gle/placeholder" class="btn btn-primary"
+                        style="width: 100%; text-align: center;">Aplicar Ahora</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="hero-background">
-            <img src="images/hero-background.svg" alt="Hero Background" class="hero-bg-image">
-        </div>
-        <div class="hero-content" style="max-width: 750px;">
-            <!-- Logo principal International -->
-            <div style="margin-bottom: 2rem; display: flex; justify-content: center;">
-                <img src="images/SupernovaInternational.png" alt="Supernova International" class="hero-logo" style="width: 100%; max-width: clamp(280px, 80%, 450px); height: auto; filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));">
-            </div>
-
-            <h1 class="hero-title" style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.4; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.8rem; text-align: center; align-items: center;">
-                <span style="font-weight: 400; font-size: clamp(1.1rem, 3vw, 1.4rem); color: var(--text-color); opacity: 0.85;">Formamos jóvenes que construyen el futuro.</span>
-                <span style="font-weight: 600; font-size: clamp(1.6rem, 5vw, 2.1rem); color: var(--text-secondary);">Proyectos reales. Estándares internacionales.</span>
-                <span class="highlight" style="font-weight: 800; font-size: clamp(2.0rem, 7vw, 3.2rem); line-height: 1.1; margin-top: 0.5rem;">No es un club. Es un sistema de alto rendimiento.</span>
+    <!-- Hero Section Revamped -->
+    <section id="inicio" class="hero-revamp">
+        <div class="hero-revamp-bg"></div>
+        <div class="hero-revamp-content fade-in">
+            <!-- Simulated 3D/Robot visual logic icon -->
+            <div class="hero-robot-img" style="font-size: 8rem;"></div>
+            <h1 class="hero-revamp-title">
+                Descubre tu lado <span class="glow-text">Supernova</span>
             </h1>
-            <p class="hero-subtitle" style="max-width: 600px; margin: 0 auto 2.5rem auto; color: var(--text-secondary); font-size: 1.05rem;">Ecosistema de alta exigencia para maximizar el potencial de jóvenes talentos en robótica y programación.</p>
-            <div class="hero-buttons" style="gap: 25px; margin-top: 1rem;">
-                <button class="btn btn-primary" onclick="window.open('https://forms.gle/placeholder', '_blank')">Aplicar Ahora</button>
-                <button class="btn btn-secondary" onclick="document.querySelector('#nodos').scrollIntoView({behavior: 'smooth'})">Explorar Nodos</button>
+            <p style="font-size: 1.2rem; color: #a0aec0; max-width: 600px; line-height: 1.6;">
+                Un ecosistema de alta exigencia, tecnología de vanguardia y robótica para empoderar a la próxima
+                generación de líderes en STEAM.
+            </p>
+            <div class="hero-buttons" style="margin-top: 1rem;">
+                <a href="#innovacion" class="btn-supernova">Únete a la supernova</a>
+                <a href="#paises" class="btn btn-secondary">Explorar Nodos</a>
             </div>
         </div>
     </section>
 
-    <!-- Qué Es Section -->
-    <section id="que-es" class="projects" style="background: var(--bg-color);">
-        <div class="container">
-            <h2 class="section-title">¿Qué es Supernova?</h2>
-            <p class="section-subtitle">Un ecosistema diseñado para maximizar el potencial de jóvenes talentos en robótica y programación.</p>
-            
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image" style="background: var(--primary-color); height: 80px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">🏭</div>
-                    <div style="padding: 1.5rem;">
-                        <h3 class="project-title">Fábrica de Talento</h3>
-                        <p class="project-description">Un entorno de alta exigencia donde el error es aprendizaje y la excelencia es el estándar. Entrenamos habilidades técnicas y blandas para el mundo real.</p>
+    <!-- MOCKUP 1: Innovación Global Encendida -->
+    <section id="innovacion" class="section-revamp" style="background: var(--revamp-bg);">
+        <div class="container" style="max-width: 1400px; padding: 0 40px;">
+            <div class="innovacion-grid">
+                <!-- Left Column -->
+                <div class="innovacion-left fade-in">
+                    <h2 class="tech-title">Innovación Global<br>Encendida</h2>
+                    <p class="tech-desc">
+                        SuperNova International es una iniciativa STEAM liderada por estudiantes, fundada para empoderar
+                        a jóvenes innovadores a enfrentar desafíos del mundo real a través de la ciencia, la tecnología
+                        y la colaboración creativa.
+                        <br><br>
+                        Operamos a través de fronteras, construyendo puentes entre estudiantes, mentores e
+                        instituciones. Nuestros proyectos van desde la robótica y las ciencias ambientales hasta las
+                        artes digitales y la tecnología comunitaria.
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <span class="stat-num glow-text-cyan">12+</span>
+                            <span class="stat-lbl">PAÍSES</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num glow-text-cyan">200+</span>
+                            <span class="stat-lbl">MIEMBROS</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num glow-text-cyan">5</span>
+                            <span class="stat-lbl">GENERACIONES</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num glow-text-cyan">30+</span>
+                            <span class="stat-lbl">PROYECTOS</span>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image" style="background: #20e070; height: 80px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">🚀</div>
-                    <div style="padding: 1.5rem;">
-                        <h3 class="project-title">Proyectos Reales</h3>
-                        <p class="project-description">No hacemos maquetas. Desarrollamos soluciones que impactan comunidades: monitoreo ambiental, automatización sustentable y software iterativo.</p>
+
+                <!-- Right Column -->
+                <div class="innovacion-right fade-in" style="transition-delay: 0.2s;">
+                    <div class="info-card">
+                        <div class="icon">🚀</div>
+                        <h4>MISIÓN</h4>
+                        <p>Empoderar a estudiantes de todo el mundo para innovar, colaborar y crear soluciones
+                            tecnológicas que hagan avanzar a la humanidad.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon">🌌</div>
+                        <h4>VISIÓN</h4>
+                        <p>Un mundo donde cada estudiante tenga las herramientas, la comunidad y la oportunidad de
+                            liderar el cambio a través de STEAM.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon">⚡</div>
+                        <h4>IMPACTO</h4>
+                        <p>Resultados medibles en educación, desarrollo comunitario y avance científico a través de
+                            proyectos liderados por estudiantes.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon">🌍</div>
+                        <h4>ALCANCE GLOBAL</h4>
+                        <p>Operando en múltiples continentes, conectados por un propósito compartido y el poder de la
+                            innovación colaborativa.</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image" style="background: #e02070; height: 80px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">🏆</div>
-                    <div style="padding: 1.5rem;">
-                        <h3 class="project-title">Competencias de Élite</h3>
-                        <p class="project-description">Medimos nuestro nivel en arenas internacionales como FIRST LEGO League. Aprendemos a competir, colaborar y destacar bajo presión.</p>
-                    </div>
-                </div>
+            </div>
+
+            <!-- Context Menu Tabs below left section -->
+            <div class="context-tabs fade-in" style="margin-top: 2rem;">
+                <button class="context-tab"
+                    onclick="document.querySelector('#generaciones').scrollIntoView({behavior: 'smooth'})">🌌
+                    GENERACIONES</button>
+                <button class="context-tab"
+                    onclick="document.querySelector('#proyectos').scrollIntoView({behavior: 'smooth'})">📅
+                    TRAYECTORIA</button>
+                <button class="context-tab"
+                    onclick="document.querySelector('#testimonios').scrollIntoView({behavior: 'smooth'})">👥
+                    EQUIPO</button>
+                <button class="context-tab"
+                    onclick="document.querySelector('#paises').scrollIntoView({behavior: 'smooth'})">🌍 PAÍSES</button>
             </div>
         </div>
     </section>
 
-    <!-- Qué NO Es Section -->
-    <section class="achievements" style="background: var(--card-bg); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-        <div class="container">
-            <h2 class="section-title">Lo que NO somos</h2>
-            <p class="section-subtitle">Para construir el futuro, primero debemos filtrar las expectativas.</p>
-            
-            <div class="achievements-list" style="max-width: 600px; margin: 0 auto; grid-template-columns: 1fr;">
-                <div class="achievement-item" style="border-left: 4px solid #e53e3e;">
-                    <span class="achievement-icon" style="background: #e53e3e20; color: #e53e3e;">✕</span>
-                    <div>
-                        <h4 style="color: var(--text-color); margin: 0 0 5px 0; font-size: 1.2rem;">No es un curso o academia</h4>
-                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem;">No hay clases tradicionales ni exámenes. Hay metas, proyectos y deadlines.</p>
-                    </div>
-                </div>
-                <div class="achievement-item" style="border-left: 4px solid #e53e3e;">
-                    <span class="achievement-icon" style="background: #e53e3e20; color: #e53e3e;">✕</span>
-                    <div>
-                        <h4 style="color: var(--text-color); margin: 0 0 5px 0; font-size: 1.2rem;">No es para todos</h4>
-                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem;">Se requiere alta disciplina, autogestión y compromiso absoluto con el equipo.</p>
-                    </div>
-                </div>
-                <div class="achievement-item" style="border-left: 4px solid #e53e3e;">
-                    <span class="achievement-icon" style="background: #e53e3e20; color: #e53e3e;">✕</span>
-                    <div>
-                        <h4 style="color: var(--text-color); margin: 0 0 5px 0; font-size: 1.2rem;">No es teórico</h4>
-                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem;">La teoría se consume para resolver el problema de hoy. El 90% es ejecución práctica.</p>
-                    </div>
+    <!-- MOCKUP 2: Las 5 Generaciones -->
+    <section id="generaciones" class="section-revamp" style="background: rgba(10,25,47,0.3);">
+        <div class="section-header fade-in">
+            <span class="subtitle-neon">NUESTRA HISTORIA</span>
+            <h2 class="tech-title-center">Las 5 Generaciones</h2>
+            <div class="header-line"></div>
+        </div>
+
+        <div class="gen-tabs-container fade-in">
+            <button class="gen-tab active" data-gen="1">GEN I</button>
+            <button class="gen-tab" data-gen="2">GEN II</button>
+            <button class="gen-tab" data-gen="3">GEN III</button>
+            <button class="gen-tab" data-gen="4">GEN IV</button>
+            <button class="gen-tab" data-gen="5">GEN V</button>
+        </div>
+
+        <div class="gen-content fade-in" id="gen-content-area">
+            <!-- Intercambiado mediante JS -->
+            <div class="gen-info">
+                <h3 class="gen-year glow-text-cyan">2023</h3>
+                <h4 class="gen-title">Primera Generación — Los Fundadores</h4>
+                <p class="gen-desc">El grupo pionero que encendió la chispa. Establecieron los primeros nodos,
+                    compitieron en FLL por primera vez y estructuraron la metodología de trabajo de alto rendimiento de
+                    Supernova.</p>
+                <div class="gen-actions">
+                    <button class="btn-outline-neon">VER PROYECTOS</button>
+                    <button class="btn-outline-neon">VER TRAYECTORIA</button>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Cómo Funciona Section -->
-    <section id="como-funciona" class="team" style="background: var(--bg-color);">
-        <div class="container">
-            <h2 class="section-title">Estructura y Proceso</h2>
-            <p class="section-subtitle">Un flujo de trabajo riguroso desde la captación hasta el despliegue internacional.</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 3rem; text-align: center;">
-                <div style="background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📝</div>
-                    <h4 style="color: var(--text-color); margin-bottom: 0.5rem;">1. Aplicación</h4>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Filtro de interés y perfil inicial para detectar hambre de aprender.</p>
-                </div>
-                <div style="background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🧠</div>
-                    <h4 style="color: var(--text-color); margin-bottom: 0.5rem;">2. Selección / Bootcamp</h4>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Prueba de fuego en vivo. Evaluamos resiliencia, lógica y trabajo en equipo.</p>
-                </div>
-                <div style="background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🛠️</div>
-                    <h4 style="color: var(--text-color); margin-bottom: 0.5rem;">3. Entrenamiento</h4>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Entrenamiento técnico exigente y desarrollo de proyectos reales.</p>
-                </div>
-                <div style="background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌍</div>
-                    <h4 style="color: var(--text-color); margin-bottom: 0.5rem;">4. Competencia</h4>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Despliegue en competencias internacionales representando al nodo.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Nodos Activos Section -->
-    <section id="nodos" class="projects" style="background: var(--card-bg); border-top: 1px solid var(--border-color);">
-        <div class="container">
-            <h2 class="section-title">Nodos Globales</h2>
-            <p class="section-subtitle">Supernova es una organización internacional que opera a través de núcleos locales autónomos.</p>
-            
-            <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-                <div class="project-card" style="cursor: pointer; transition: transform 0.3s;" onclick="window.location.href='paraguay/index.html'">
-                    <div class="project-image" style="background: url('images/hero-background.svg') center/cover; height: 160px; display: flex; align-items: center; justify-content: center;">
-                        <span style="font-size: 3rem; background: rgba(0,0,0,0.4); padding: 10px 20px; border-radius: 8px; color: white; font-weight: bold;">🇵🇾</span>
-                    </div>
-                    <div style="padding: 1.5rem;">
-                        <h3 class="project-title">Supernova Paraguay</h3>
-                        <p class="project-description">Primer nodo operativo. Desarrollando soluciones locales y compitiendo en FLL.</p>
-                        <a href="paraguay/index.html" class="btn btn-secondary" style="margin-top: 1rem; width: 100%; text-align: center;">Visitar Nodo</a>
-                    </div>
-                </div>
-                
-                <div class="project-card" style="opacity: 0.6; cursor: not-allowed;">
-                    <div class="project-image" style="background: #1a1f26; height: 160px; display: flex; align-items: center; justify-content: center;">
-                        <span style="font-size: 3rem;">🔜</span>
-                    </div>
-                    <div style="padding: 1.5rem;">
-                        <h3 class="project-title" style="color: var(--text-secondary);">Próximos Países</h3>
-                        <p class="project-description">Estamos evaluando la apertura de nuevos nodos de alto rendimiento en la región.</p>
-                        <button class="btn btn-secondary" disabled style="margin-top: 1rem; width: 100%;">Próximamente</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quiénes Somos Section -->
-    <section id="quienes-somos" class="team" style="background: var(--bg-color); border-top: 1px solid var(--border-color);">
-        <div class="container">
-            <h2 class="section-title">Quiénes están detrás</h2>
-            <p class="section-subtitle">Liderazgo y visión para el desarrollo del talento tecnológico.</p>
-            
-            <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; justify-content: center; max-width: 800px; margin: 0 auto;">
-                <div class="project-card" style="text-align: center; padding: 2rem;">
-                    <div style="width: 120px; height: 120px; border-radius: 50%; background: var(--card-bg); margin: 0 auto 1.5rem auto; overflow: hidden; border: 3px solid var(--primary-color);">
-                        <img src="images/Alejandro Portillo.jpg" alt="Alejandro Portillo" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <h3 style="color: var(--text-color); margin-bottom: 0.5rem;">Alejandro Portillo</h3>
-                    <p style="color: var(--primary-color); font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem;">Founder</p>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Visionario tecnológico enfocado en la creación de ecosistemas de alto rendimiento y formación de líderes.</p>
-                </div>
-                
-                <div class="project-card" style="text-align: center; padding: 2rem;">
-                    <div style="width: 120px; height: 120px; border-radius: 50%; background: var(--card-bg); margin: 0 auto 1.5rem auto; overflow: hidden; border: 3px solid var(--primary-color);">
-                        <img src="images/Robert salinas.png" alt="Esteban Salinas" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <h3 style="color: var(--text-color); margin-bottom: 0.5rem;">Esteban Salinas</h3>
-                    <p style="color: var(--primary-color); font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem;">Co-Founder & Director Paraguay</p>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Líder técnico y operativo, impulsando el desarrollo local y la excelencia en competencia.</p>
+            <div class="gen-photos">
+                <div class="gen-photo-box">[Foto Gen I]</div>
+                <div class="gen-photo-box">[Foto Gen I]</div>
+                <div class="gen-photo-box">[Foto Gen I]</div>
+                <div class="gen-photo-box">[Foto Gen I]</div>
+                <div class="gen-photo-box">[Foto Gen I]</div>
+                <div class="gen-photo-box add-photo">
+                    <span>📷</span><br>Subir foto
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Proceso de Selección Section -->
-    <section id="seleccion" class="achievements" style="background: var(--card-bg); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-        <div class="container">
-            <h2 class="section-title">Proceso de Selección</h2>
-            <p class="section-subtitle">Abiertos en entrada, exigentes en permanencia.</p>
-            
-            <div class="achievements-list" style="max-width: 600px; margin: 0 auto; grid-template-columns: 1fr;">
-                <div class="achievement-item" style="border-left: 4px solid var(--primary-color);">
-                    <span class="achievement-icon" style="background: rgba(0, 212, 255, 0.1); color: var(--primary-color);">1</span>
-                    <div>
-                        <h4 style="color: var(--text-color); margin: 0 0 5px 0; font-size: 1.2rem;">Postulación Online</h4>
-                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem;">Completa el formulario inicial. Buscamos hambre de aprender y compromiso.</p>
-                    </div>
-                </div>
-                <div class="achievement-item" style="border-left: 4px solid var(--primary-color);">
-                    <span class="achievement-icon" style="background: rgba(0, 212, 255, 0.1); color: var(--primary-color);">2</span>
-                    <div>
-                        <h4 style="color: var(--text-color); margin: 0 0 5px 0; font-size: 1.2rem;">Prueba Técnica / Entrevista</h4>
-                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem;">Evaluación de lógica, resiliencia y capacidad de resolución de problemas.</p>
-                    </div>
-                </div>
-                <div class="achievement-item" style="border-left: 4px solid var(--primary-color);">
-                    <span class="achievement-icon" style="background: rgba(0, 212, 255, 0.1); color: var(--primary-color);">3</span>
-                    <div>
-                        <h4 style="color: var(--text-color); margin: 0 0 5px 0; font-size: 1.2rem;">Bootcamp de Admisión</h4>
-                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem;">Inmersión de 3 días en un proyecto real para evaluar trabajo en equipo.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://forms.gle/placeholder" class="btn btn-primary btn-glow">Iniciar Postulación Ahora</a>
-            </div>
+    <!-- MOCKUP 3: Presencia Global - Países -->
+    <section id="paises" class="section-revamp" style="background: var(--revamp-bg);">
+        <div class="section-header fade-in">
+            <span class="subtitle-neon">PRESENCIA GLOBAL</span>
+            <h2 class="tech-title-center">Países</h2>
+            <div class="header-line"></div>
         </div>
+
+        <div class="paises-tabs fade-in">
+            <button class="paises-tab active" data-pais="todos">TODOS</button>
+            <button class="paises-tab" data-pais="visitado"><span style="color:#00f2fe">✔</span> VISITADOS</button>
+            <button class="paises-tab" data-pais="por_visitar"><span style="color:#ff7b00">▶</span> POR VISITAR</button>
+        </div>
+
+        <div class="paises-grid fade-in" id="paises-container">
+            <!-- Contenido inyectado por JS -->
+        </div>
+    </section>
+
+    <!-- MOCKUP 4: Galería (Proyectos y Eventos) -->
+    <section id="proyectos" class="section-revamp" style="background: rgba(10,25,47,0.3);">
+        <div class="section-header fade-in">
+            <span class="subtitle-neon">ACTIVIDADES & MOMENTOS</span>
+            <h2 class="tech-title-center">Galería</h2>
+            <div class="header-line"></div>
+        </div>
+
+        <!-- Gallery Filters -->
+        <div class="gallery-filters fade-in"
+            style="text-align: center; margin-bottom: 40px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <button class="filter-btn active" data-filter="all">TODOS</button>
+            <button class="filter-btn" data-filter="proyecto">PROYECTO</button>
+            <button class="filter-btn" data-filter="evento">EVENTO</button>
+            <button class="filter-btn" data-filter="premio">PREMIO</button>
+        </div>
+
+        <div id="projects-container" class="galeria-masonry">
+            <!-- Content will be generated by JS -->
+        </div>
+        <p style="text-align: center; color: #4a5568; margin-top: 40px; font-family: monospace; letter-spacing: 2px;">
+            PASA EL CURSOR PARA PAUSAR · AGREGA TUS FOTOS REALES EN ASSETS/IMAGES/</p>
+    </section>
+
+    <!-- MOCKUP 5: Partners & Organizaciones -->
+    <section id="partners" class="section-revamp" style="background: var(--revamp-bg);">
+        <div class="section-header fade-in">
+            <span class="subtitle-neon">COLABORACIONES</span>
+            <h2 class="tech-title-center">Partners & Organizaciones</h2>
+            <div class="header-line"></div>
+        </div>
+        <div class="partners-grid fade-in">
+            <div class="partner-card">[UWC LOGO]</div>
+            <div class="partner-card">[PARTNER LOGO]</div>
+            <div class="partner-card">[PARTNER LOGO]</div>
+            <div class="partner-card">[PARTNER LOGO]</div>
+            <div class="partner-card">[PARTNER LOGO]</div>
+            <div class="partner-card">[PARTNER LOGO]</div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Suscripción -->
+    <section class="newsletter-section fade-in">
+        <h2 style="font-size: 2rem; color: white; margin-bottom: 15px;">Únete a nuestra órbita</h2>
+        <p style="color: #cbd5e0; max-width: 600px; margin: 0 auto;">Suscríbete al newsletter para enterarte de nuevos
+            proyectos, competencias, y novedades de nuestra fábrica de talentos.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('¡Gracias por unirte!');">
+            <input type="email" class="newsletter-input" placeholder="Tu correo electrónico..." required>
+            <button type="submit" class="btn-supernova">Suscribirme</button>
+        </form>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Supernova International</h3>
-                    <p>Fábrica internacional de talento de alto rendimiento en tecnología.</p>
+    <footer class="footer"
+        style="background: rgba(3, 8, 22, 0.95); padding: 50px 20px; border-top: 1px solid rgba(0,242,254,0.1);">
+        <div class="container fade-in">
+            <div
+                style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; margin-bottom: 30px;">
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="color: white; margin-bottom: 15px;">Supernova International</h3>
+                    <p style="color: #a0aec0;">Fábrica internacional de talento de alto rendimiento en tecnología a
+                        través de un ecosistema STEAM riguroso.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Navegación</h4>
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#que-es">Qué es</a></li>
-                        <li><a href="#nodos">Nodos</a></li>
+                <div style="flex: 1; min-width: 200px;">
+                    <h4 style="color: white; margin-bottom: 15px;">Navegación</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="#inicio"
+                                style="color: #a0aec0; text-decoration: none;">Inicio</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#innovacion"
+                                style="color: #a0aec0; text-decoration: none;">Innovación</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#proyectos"
+                                style="color: #a0aec0; text-decoration: none;">Proyectos</a></li>
+                        <li><a href="#paises" style="color: #a0aec0; text-decoration: none;">Nodos</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary);">© 2026 Supernova Organization. Todos los derechos reservados.</p>
+                <div style="flex: 1; min-width: 200px;">
+                    <h4 style="color: white; margin-bottom: 15px;">Síguenos</h4>
+                    <ul style="list-style: none; padding: 0; display:flex; gap: 15px;">
+                        <li><a href="#"
+                                style="color: var(--revamp-secondary); font-size: 1.5rem; text-decoration: none;">📷</a>
+                        </li>
+                        <li><a href="#"
+                                style="color: var(--revamp-primary); font-size: 1.5rem; text-decoration: none;">📺</a>
+                        </li>
+                        <li><a href="#" style="color: #4f9cf9; font-size: 1.5rem; text-decoration: none;">🌐</a></li>
+                    </ul>
                 </div>
+            </div>
+            <div
+                style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; color: #718096; font-size: 0.9rem;">
+                © 2026 Supernova Organization. Todos los derechos reservados.
             </div>
         </div>
     </footer>
 
-    <script src="scripts/main.js"></script>
-    <!-- YouTube Modal -->
+    <!-- YouTube Modal (Original) -->
     <div id="youtubeModal" class="youtube-modal">
         <div class="youtube-modal-content">
             <span class="youtube-close" onclick="closeYouTubeModal()">&times;</span>
@@ -324,5 +354,11 @@
         </div>
     </div>
 
+    <!-- Original Scripts -->
+    <script src="scripts/main.js"></script>
+    <!-- Revamped Scripts -->
+    <script src="scripts/landing-revamp.js"></script>
+
 </body>
+
 </html>

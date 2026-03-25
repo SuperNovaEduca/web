@@ -1,23 +1,6 @@
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function () {
-    // Navigation smooth scrolling
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            const targetId = this.getAttribute('href');
-            if (targetId.startsWith('#')) {
-                e.preventDefault();
-                const targetSection = document.querySelector(targetId);
-                if (targetSection) {
-                    const offsetTop = targetSection.offsetTop - 70; // Account for fixed navbar
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
+    // CSS scroll-behavior: smooth now handles smooth scrolling natively.
 
     // Theme toggle functionality
     const themeToggle = document.getElementById('theme-toggle');

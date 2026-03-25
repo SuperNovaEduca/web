@@ -5,9 +5,9 @@
     --revamp-card-border: rgba(255, 255, 255, 0.05);
 
     /* Neon Colors */
-    --neon-cyan: #00f2fe;
-    --neon-magenta: #ff4081;
-    --neon-orange: #ff7b00;
+    --neon-cyan: #00d4ff;
+    --neon-magenta: #a100ff;
+    --neon-orange: #ffb703;
     --neon-green: #00ff7f;
 
     --revamp-text: #f0f4f8;
@@ -44,11 +44,21 @@ body {
 
     0%,
     100% {
-        box-shadow: 0 0 20px rgba(0, 242, 254, 0.3), 0 0 40px rgba(255, 64, 129, 0.3), inset 0 0 10px rgba(0, 242, 254, 0.2);
+        box-shadow: 0 0 20px rgba(0, 212, 255, 0.3), 0 0 40px rgba(161, 0, 255, 0.3), inset 0 0 10px rgba(0, 212, 255, 0.2);
     }
 
     50% {
-        box-shadow: 0 0 40px rgba(0, 242, 254, 0.5), 0 0 80px rgba(255, 64, 129, 0.5), inset 0 0 20px rgba(0, 242, 254, 0.4);
+        box-shadow: 0 0 40px rgba(0, 212, 255, 0.5), 0 0 80px rgba(161, 0, 255, 0.5), inset 0 0 20px rgba(0, 212, 255, 0.4);
+    }
+}
+
+@keyframes spinGlobe {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 200% 0;
     }
 }
 
@@ -223,19 +233,37 @@ html[data-theme="dark"] .hero-revamp {
     left: 50%;
     width: 60vw;
     height: 60vw;
+    max-width: 600px;
+    max-height: 600px;
     transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(0, 242, 254, 0.1), transparent 70%);
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Land_ocean_ice_2048.jpg/1024px-Land_ocean_ice_2048.jpg');
+    background-size: cover;
     border-radius: 50%;
+    box-shadow:
+        inset -30px -30px 50px rgba(0, 0, 0, 0.9),
+        inset 10px 10px 30px rgba(255, 255, 255, 0.3),
+        0 0 50px rgba(0, 212, 255, 0.3);
+    animation: spinGlobe 40s linear infinite;
     z-index: 0;
     pointer-events: none;
+    opacity: 0.85;
 }
 
 html[data-theme="dark"] .hero-revamp-bg {
-    animation: supernova-glow 4s infinite ease-in-out;
+    animation: spinGlobe 40s linear infinite;
+    box-shadow:
+        inset -40px -40px 60px rgba(0, 0, 0, 0.95),
+        inset 10px 10px 30px rgba(255, 255, 255, 0.2),
+        0 0 80px rgba(0, 212, 255, 0.4);
+    opacity: 0.9;
 }
 
 html[data-theme="light"] .hero-revamp-bg {
-    background: radial-gradient(circle, rgba(0, 150, 255, 0.05), transparent 70%);
+    box-shadow:
+        inset -20px -20px 40px rgba(0, 0, 0, 0.6),
+        inset 10px 10px 30px rgba(255, 255, 255, 0.6),
+        0 0 40px rgba(0, 150, 255, 0.2);
+    opacity: 0.9;
 }
 
 

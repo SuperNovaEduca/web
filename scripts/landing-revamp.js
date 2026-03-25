@@ -94,22 +94,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const genTabs = document.querySelectorAll('.gen-tab');
     const genArea = document.getElementById('gen-content-area');
 
-    genTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            genTabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            const genId = tab.getAttribute('data-gen');
-            renderGeneration(genId);
+    function setupGenerationEventListeners() {
+        if (!genArea) return;
+        genTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                genTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const genId = tab.getAttribute('data-gen');
+                renderGeneration(genId);
+            });
         });
-    });
+        // Initial render
+        renderGeneration(1);
+    }
 
     function renderGeneration(id) {
         if (!genArea || !genData[id]) return;
         const data = genData[id];
 
         let photosHtml = '';
+        const placeholderIcon = `
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.3;">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+        `;
         for (let i = 1; i <= data.photos; i++) {
-            photosHtml += `<div class="gen-photo-box">[Foto Gen ${id}]</div>`;
+            photosHtml += `<div class="gen-photo-box">${placeholderIcon} Gen ${id}</div>`;
         }
         photosHtml += `<div class="gen-photo-box add-photo"><span>📷</span><br>Subir foto</div>`;
 
@@ -119,8 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4 class="gen-title">${data.title}</h4>
                 <p class="gen-desc">${data.desc}</p>
                 <div class="gen-actions">
-                    <button class="btn-outline-neon">VER PROYECTOS</button>
-                    <button class="btn-outline-neon">VER TRAYECTORIA</button>
+                    <button class="btn btn-outline-neon" onclick="document.querySelector('#proyectos').scrollIntoView({behavior: 'smooth'})">VER PROYECTOS</button>
+                    <button class="btn btn-outline-neon" onclick="document.querySelector('#generaciones').scrollIntoView({behavior: 'smooth'})">VER TRAYECTORIA</button>
                 </div>
             </div>
             <div class="gen-photos fade-in visible">
@@ -169,17 +181,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (paisesContainer) renderPaises('todos');
+    function setupPaisesEventListeners() {
+        if (paisesContainer) {
+            renderPaises('todos');
+            paisesTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    paisesTabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    renderPaises(tab.getAttribute('data-pais'));
+                });
+            });
+        }
+    }
 
-    paisesTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            paisesTabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            renderPaises(tab.getAttribute('data-pais'));
-        });
-    });
-
-    // 5. Galería Interactiva con Badges (Nuevos Mockups)
+    // 5. Galería Interactiva
     const galeriaData = [
         { id: 1, title: 'Ganadores FLL', tag: 'PREMIO', tagClass: 'premio', img: 'images/techvoyage.jpg', fallback: 'https://images.unsplash.com/photo-1563968603417-1833e70cf7c5?w=600&h=400&fit=crop', video: '' },
         { id: 2, title: 'Expo Educación 2024', tag: 'EVENTO', tagClass: 'evento', img: 'images/unlitrodeluz.jpg', fallback: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop', video: '' },
@@ -205,21 +220,29 @@ document.addEventListener('DOMContentLoaded', () => {
             galeriaContainer.innerHTML += `
                 <div class="galeria-item fade-in visible" ${clickAction}>
                     <img src="${g.img}" onerror="this.src='${g.fallback}'" alt="${g.title}">
+                    <div class="galeria-overlay"></div>
                     <span class="galeria-badge badge-${g.tagClass}">${g.tag}</span>
-                    ${g.video ? '<span style="position:absolute; z-index: 2; font-size: 2rem;">▶</span>' : ''}
+                    ${g.video ? '<span class="video-play-icon">▶</span>' : ''}
                 </div>
             `;
         });
     }
 
-    if (galeriaContainer) renderGaleria('all');
+    function setupGaleriaEventListeners() {
+        if (galeriaContainer) {
+            renderGaleria('all');
+            galeriaTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    galeriaTabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    renderGaleria(tab.getAttribute('data-filter'));
+                });
+            });
+        }
+    }
 
-    galeriaTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            galeriaTabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            renderGaleria(tab.getAttribute('data-filter'));
-        });
-    });
-
+    // Initial setup calls
+    setupGenerationEventListeners();
+    setupPaisesEventListeners();
+    setupGaleriaEventListeners();
 });
